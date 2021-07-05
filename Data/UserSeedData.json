@@ -9,8 +9,8 @@
       "Introduction": "Voluptate do enim aliqua ipsum ullamco aliquip eiusmod ad irure. Magna nulla consectetur commodo velit magna labore duis ullamco nisi cupidatat voluptate reprehenderit consequat. Laboris sint magna elit pariatur non anim ullamco sunt enim laboris consectetur. Occaecat commodo excepteur nostrud minim adipisicing minim est mollit ipsum. Quis dolor id eiusmod minim occaecat ea magna velit ex sunt. Consectetur dolor duis eu pariatur duis minim cupidatat mollit et ex laborum reprehenderit.\r\n",
       "LookingFor": "Do anim dolor aute laborum commodo elit irure ut culpa nisi id elit ullamco. Ut culpa laborum eiusmod Lorem occaecat qui incididunt amet proident aliquip sit. Deserunt sint anim quis sint eu.\r\n",
       "Interests": "Minim eiusmod dolore elit laboris.",
-      "City": "Loveland",
       "Country": "Kyrgyzstan",
+      "City": "Loveland",
       "Photos": [
         {
           "Url": "https://randomuser.me/api/portraits/women/58.jpg",
@@ -94,7 +94,7 @@
         }
       ]
     },
-        {
+    {
           "UserName": "Oriel",
           "Gender": "male",
           "DateOfBirth": "1991-05-10",
@@ -112,8 +112,8 @@
               "IsMain": true
             }
           ]
-        },
-        {
+    },
+    {
           "UserName": "Adriel",
           "Gender": "male",
           "DateOfBirth": "1991-11-30",
@@ -131,8 +131,8 @@
               "IsMain": true
             }
           ]
-        },
-        {
+    },
+    {
           "UserName": "Hector",
           "Gender": "male",
           "DateOfBirth": "1973-01-17",
@@ -150,8 +150,8 @@
               "IsMain": true
             }
           ]
-        },
-        {
+    },
+    {
           "UserName": "David",
           "Gender": "male",
           "DateOfBirth": "1988-10-12",
@@ -169,8 +169,8 @@
               "IsMain": true
             }
           ]
-        },
-        {
+    },
+    {
           "UserName": "Juan",
           "Gender": "male",
           "DateOfBirth": "1999-08-25",
@@ -188,5 +188,5 @@
               "IsMain": true
             }
           ]
-        }
+    }
   ]
