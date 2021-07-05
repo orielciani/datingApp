@@ -8,6 +8,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { SideComponent } from './shared/side/side.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 // Components
 import { HomeComponent } from './pages/home/home.component';
@@ -25,6 +26,8 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { MemberCardComponent } from './pages/members/member-card/member-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+import { MemberEditComponent } from './pages/members/member-edit/member-edit.component';
+import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 
 
 @NgModule({
@@ -42,7 +45,8 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
@@ -50,12 +54,14 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    NgxSpinnerModule
 
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

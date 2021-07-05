@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
+import { MemberEditComponent } from './pages/members/member-edit/member-edit.component';
 
 // Components
 import { HomeComponent } from './pages/home/home.component';
@@ -11,6 +12,7 @@ import { MemberDetailComponent } from './pages/members/member-detail/member-deta
 import { MemberListComponent } from './pages/members/member-list/member-list.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { PreventUnsaveChangesGuard } from './_guards/prevent-unsave-changes.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,6 +22,7 @@ const routes: Routes = [
     children: [
       {path: 'members', component: MemberListComponent},
       {path: 'members/:username', component: MemberDetailComponent},
+      {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsaveChangesGuard]},
       {path: 'lists', component: ListsComponent},
       {path: 'messages', component: MessagesComponent},
     ]},
